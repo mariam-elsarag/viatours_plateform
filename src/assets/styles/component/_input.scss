@@ -1,0 +1,105 @@
+// ========================================
+// utility
+// ========================================
+.reset_input {
+  outline: none;
+  box-shadow: none;
+}
+
+.input_error {
+  border: 1px solid var(--color-error-500) !important;
+}
+
+.disabled_input {
+  background: var(--color-neutral-50) !important;
+}
+
+.label {
+  color: var(--color-slate-500);
+}
+
+// ========================================
+// input class style
+// ========================================
+.input {
+  border: 1px solid var(--color-slate-200);
+  background: white;
+  border-radius: 12px;
+  padding: 8px;
+  height: 40px;
+  color: var(--color-slate-600);
+
+  input {
+    @extend .reset_input;
+  }
+
+  &.focus {
+    border: 1px solid var(--color-primary-500);
+  }
+
+  &.fill {
+    border: 1px solid var(--color-slate-400) !important;
+  }
+
+  &.error {
+    @extend .input_error;
+  }
+
+  &.disabled {
+    opacity: 0.6;
+  }
+
+  @media (min-width: 745px) {
+    height: 48px;
+    padding: 12px !important;
+  }
+}
+
+// ========================================
+// textarea
+// ========================================
+.textarea {
+  @extend .input;
+  height: 247px;
+
+  textarea {
+    @extend .reset_input;
+    resize: none;
+    height: 100%;
+  }
+}
+
+// ========================================
+// input style
+// ========================================
+input {
+  &::placeholder {
+    color: var(--color-slate-500);
+  }
+
+  // Autofill styling
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active,
+  &:-moz-autofil,
+  &:-moz-autofill,
+  &:autofill {
+    box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: var(--color-slate-600);
+    -moz-text-fill-color: var(--color-slate-600);
+  }
+
+  // Hide eye icon in password fields on IE
+  &[type="password"]::-ms-reveal,
+  &[type="password"]::-ms-clear {
+    display: none;
+  }
+
+  // remove arrows from number input
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

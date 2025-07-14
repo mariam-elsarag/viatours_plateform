@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-100: #e6f4ed;
+  --color-primary-200: #c1e3d3;
+  --color-primary-300: #9bd1b8;
+  --color-primary-400: #75bf9e;
+  --color-primary-500: #1c4532;
+  --color-primary-600: #173b2b;
+  --color-primary-700: #133025;
+  --color-primary-800: #0e261e;
+  --color-primary-900: #0a1c17;
+
+  --color-gray-50: #f7fafc;
+  --color-gray-100: #cfd9e0;
+  --color-gray-200: #d9d9d9;
+  --color-gray-400: #a8a8a8;
+
+  --color-error-50: #fce8ecff;
+  --color-error-100: #f9d2d8ff;
+  --color-error-200: #f4a4b1ff;
+  --color-error-300: #ee778bff;
+  --color-error-400: #e94964ff;
+  --color-error-500: #bb1732ff;
+  --color-error-600: #b61631ff;
+  --color-error-700: #881125ff;
+  --color-error-800: #5b0b18ff;
+  --color-error-900: #2d060cff;
+  --color-error-950: #170306ff;
+
+  --color-icon: var(--color-slate-500);
+}
+
+@layer base {
+  .small_scroll_bar::-webkit-scrollbar {
+    width: 3.5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    background: var(--color-primary-500);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray-200);
+  }
+  .hide_scroll_bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide_scroll_bar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@layer utilities {
+  .flex_center_y {
+    @apply flex items-center;
+  }
+  .flex_center {
+    @apply flex items-center justify-center;
+  }
+  .main_gap {
+    @apply flex flex-col gap-5;
+  }
+  .main_page {
+    @apply bg-white rounded-xl p-6 min-h-[81dvh] h-full;
+  }
+  .inner_page {
+    @apply rounded-lg py-6 px-4;
+  }
+}
