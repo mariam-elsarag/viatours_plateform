@@ -269,4 +269,35 @@ input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.p-checkbox {
+  width: 18px !important;
+  height: 18px !important;
+}
+.p-checkbox .p-checkbox-box {
+  width: 18px !important;
+  height: 18px !important;
+  background: white;
+  border: 1.5px solid var(--color-slate-500);
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+.p-checkbox.p-highlight .p-checkbox-box {
+  border: 1.5px solid var(--color-primary-500);
+  background-color: var(--color-primary-500);
+}
+.p-checkbox.p-highlight .p-checkbox-box.p-disabled {
+  border: 1.5px solid var(--color-slate-500);
+  background-color: var(--color-slate-500);
+}
+.p-checkbox.p-disabled {
+  border: 1.5px solid var(--color-slate-500);
+}
+
+.p-invalid .p-checkbox-box {
+  border: 1.5px solid var(--color-error-500);
 }/*# sourceMappingURL=style.css.map */

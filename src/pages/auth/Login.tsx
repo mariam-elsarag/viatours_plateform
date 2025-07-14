@@ -108,7 +108,10 @@ const Login = () => {
               </label>
             </div>
             {/* remember me */}
-            <Link to="/forget-password" className="text-primary-500 body_lg">
+            <Link
+              to="/forget-password"
+              className="underline text-primary-500 body_lg"
+            >
               Forgot Password?
             </Link>
           </div>
