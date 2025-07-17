@@ -63,7 +63,7 @@ const Form_Builder: FC<FormBuilderProps> = ({
               className={`flex input gap-2 ${
                 item.disabled || loading ? "disabled" : ""
               } ${isInvalid ? "error" : ""} ${
-                field?.value ? "fill" : ""
+                field?.value && !isInvalid ? "fill" : ""
               } focus-within:!border-primary-500`}
             >
               {item.icon && <span className="flex_center">{item.icon}</span>}

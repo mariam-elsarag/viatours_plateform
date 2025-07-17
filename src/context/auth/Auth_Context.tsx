@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const AuthContext = createContext<null | AuthContextType>(null);
 
@@ -30,9 +31,7 @@ type Props = {
 const AuthProvider = ({ children }: Props) => {
   const navigate = useNavigate();
 
-  const [token, setToken] = useState<string | null>(
-    localStorage.getItem("token")
-  );
+  const [token, setToken] = useState<string | null>(Cookies.get("token"));
 
   const [user, setUser] = useState<UserType>({
     id: localStorage.getItem("id"),
@@ -41,8 +40,13 @@ const AuthProvider = ({ children }: Props) => {
     avatar: localStorage.getItem("avatar"),
   });
 
-  const login = (data: LoginType) => {
-    localStorage.setItem("token", data.token || "");
+  const login = (data: LoginType, rememberUser: boolean) => {
+    if (rememberUser) {
+      Cookies.set("token", data?.token, { expires: 20 });
+    } else {
+      Cookies.set("token", data?.token);
+    }
+
     localStorage.setItem("id", data.id || "");
     localStorage.setItem("avatar", data.avatar || "");
     localStorage.setItem("fullName", data.fullName || "");
@@ -58,6 +62,7 @@ const AuthProvider = ({ children }: Props) => {
   };
 
   const logout = (nav = "/") => {
+    Cookies.remove("token");
     localStorage.clear();
     setToken(null);
     setUser({ id: null, fullName: null, avatar: null, role: null });

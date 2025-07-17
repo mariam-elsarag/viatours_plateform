@@ -1,0 +1,95 @@
+@use "../utils/font";
+.Toastify__toast-container {
+  .Toastify__progress-bar--wrp {
+    height: 2.5px !important;
+  }
+  .Toastify__close-button {
+    top: 50%;
+    right: auto !important;
+    inset-inline-end: 12px !important;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    & svg {
+      fill: var(--color-slate-500);
+      stroke: var(--color-slate-500);
+    }
+  }
+
+  // success
+  .toast_main_content_style {
+    box-shadow: 0px 2px 8px 0px #0000001a;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    padding: 12px;
+    overflow: hidden !important;
+  }
+  .Toastify__toast {
+    position: relative;
+    color: var(--color-text);
+    font-size: 13px;
+    &::before {
+      content: "";
+      position: absolute;
+      display: flex;
+      inset-inline-start: 0;
+      width: 4px;
+      height: 100%;
+    }
+    &--success {
+      @extend .toast_main_content_style;
+      .Toastify__toast-icon svg {
+        fill: var(--color-status-success);
+      }
+      &::before {
+        background-color: var(--color-status-success);
+      }
+    }
+    &--info {
+      @extend .toast_main_content_style;
+      .Toastify__toast-icon svg {
+        fill: var(--color-status-info);
+      }
+      &::before {
+        background-color: var(--color-status-info);
+      }
+    }
+    &--error {
+      @extend .toast_main_content_style;
+      .Toastify__toast-icon svg {
+        fill: var(--color-status-error);
+      }
+      &::before {
+        background-color: var(--color-status-error);
+      }
+    }
+    &--warning {
+      @extend .toast_main_content_style;
+      .Toastify__toast-icon svg {
+        fill: var(--color-status-warning);
+      }
+      &::before {
+        background-color: var(--color-status-warning);
+      }
+    }
+  }
+  .Toastify__progress-bar {
+    &--success {
+      background-color: var(--color-status-success) !important;
+    }
+    &--info {
+      background-color: var(--color-status-info) !important;
+    }
+    &--error {
+      background-color: var(--color-status-error) !important;
+    }
+    &--warning {
+      background-color: var(--color-status-warning) !important;
+    }
+  }
+}

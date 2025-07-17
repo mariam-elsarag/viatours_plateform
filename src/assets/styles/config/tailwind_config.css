@@ -28,6 +28,14 @@
   --color-error-900: #2d060cff;
   --color-error-950: #170306ff;
 
+  --color-success-50: var(--color-green-50);
+
+  --color-status-success: var(--color-green-500);
+  --color-status-info: var(--color-sky-600);
+  --color-status-error: var(--color-error-500);
+  --color-status-warning: var(--color-orange-400);
+
+  --color-text: var(--color-slate-500);
   --color-icon: var(--color-slate-500);
 }
 

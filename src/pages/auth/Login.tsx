@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import { useAuth } from "../../context/auth/Auth_Context";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { LockIcon, UserIcon } from "../../assets/icons/Icon";
-import { emailRegex } from "../../common/constant/validator";
+import { EmailIcon, LockIcon, UserIcon } from "../../assets/icons/Icon";
+import { emailRegex, passwordPattern } from "../../common/constant/validator";
 import Form_Builder from "../../components/shared/form/Form_Builder";
 import Button from "../../components/shared/button/Button";
 import { Checkbox } from "primereact/checkbox";
 import Unauth_Header from "./component/Unauth_Header";
+import { handleError } from "../../common/utils/handleError";
+import axiosInstance from "../../service/axiosInstance";
+import { API } from "../../service/apiUrl";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [remember, setRemember] = useState();
+  const [remember, setRemember] = useState(false);
   const [loading, setLoading] = useState(false);
 
   // ___________ useform _________
@@ -35,19 +39,19 @@ const Login = () => {
     {
       id: 1,
       formType: "input",
-      fieldName: "queryset",
+      fieldName: "email",
       name: "Email",
       type: "email",
       label: "Email",
       placeholder: "Email",
       validator: {
-        required: "required_field",
+        required: "Email is required",
         pattern: {
           value: emailRegex,
           message: "Please enter a valid email, e.g., example@domain.com.",
         },
       },
-      icon: <UserIcon />,
+      icon: <EmailIcon />,
     },
     {
       id: 2,
@@ -58,20 +62,39 @@ const Login = () => {
       placeholder: "Password",
       validator: {
         required: "Password is required",
+        pattern: {
+          value: passwordPattern,
+          message:
+            "Password must be 8+ characters, with uppercase, lowercase, a number, and a special character.",
+        },
       },
       icon: <LockIcon />,
       showForgetPassword: true,
     },
   ];
 
-  const onSubmit = async (data) => {};
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      const res = await axiosInstance.post(API.auth.login, data);
+
+      if (res.status === 200) {
+        login(data, remember ? true : false);
+        navigate("/");
+      }
+    } catch (err) {
+      handleError(err, setError, navigate, data?.email);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="flex-1 flex flex-col gap-10 "
     >
       <Unauth_Header
-        title="Sign ip"
+        title="Sign in"
         description={
           <p>
             <span>Don’t have an account? </span>
@@ -109,7 +132,7 @@ const Login = () => {
             </div>
             {/* remember me */}
             <Link
-              to="/forget-password"
+              to="/account/forget-password"
               className="underline text-primary-500 body_lg"
             >
               Forgot Password?

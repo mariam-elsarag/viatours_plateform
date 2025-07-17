@@ -95,3 +95,26 @@ export const LockIcon = ({
     </svg>
   );
 };
+export const EmailIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 8L10.3359 10.8906C11.3436 11.5624 12.6564 11.5624 13.6641 10.8906L18 8M6 19H18C19.6569 19 21 17.6569 21 16V8C21 6.34315 19.6569 5 18 5H6C4.34315 5 3 6.34315 3 8V16C3 17.6569 4.34315 19 6 19Z"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
