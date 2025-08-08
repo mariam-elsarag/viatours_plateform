@@ -148,7 +148,7 @@ const Otp = () => {
             loading={loading}
             setError={setError}
           />{" "}
-          <p className="text-slate-500 body_md font-normal flex_center gap-2 ">
+          <p className="text-neutral-500 body_md font-normal flex_center gap-2 ">
             {remainingTime === 0 || !remainingTime ? (
               <p className="flex_center_y gap-2">
                 <span>Didn’t receive a code?</span>

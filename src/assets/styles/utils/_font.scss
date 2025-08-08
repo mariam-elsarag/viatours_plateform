@@ -53,10 +53,10 @@
   }
 }
 .title_lg {
-  @include typography(14px, 20px);
+  @include typography(16px, 20px);
 
   @media (min-width: 744px) {
-    @include typography(16px, 24px);
+    @include typography(18px, 24px);
   }
 }
 .title_md {

@@ -18,10 +18,10 @@ const Unauth_Header: FC<UnauthHeaderType> = ({
   return (
     <header className={`flex flex-col gap-6 ${style[variant]} `}>
       {title && (
-        <h1 className="text-slate-800 font-bold headline_md">{title}</h1>
+        <h1 className="text-neutral-800 font-bold headline_md">{title}</h1>
       )}
       {description && (
-        <div className="body_md text-slate-500">{description}</div>
+        <div className="body_md text-neutral-500">{description}</div>
       )}
     </header>
   );

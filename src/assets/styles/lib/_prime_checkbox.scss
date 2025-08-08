@@ -5,7 +5,7 @@
     width: 18px !important;
     height: 18px !important;
     background: white;
-    border: 1.5px solid var(--color-slate-500);
+    border: 1.5px solid var(--color-neutral-500);
     border-radius: 5px !important;
     -webkit-border-radius: 5px !important;
     -moz-border-radius: 5px !important;
@@ -16,12 +16,12 @@
     border: 1.5px solid var(--color-primary-500);
     background-color: var(--color-primary-500);
     &.p-disabled {
-      border: 1.5px solid var(--color-slate-500);
-      background-color: var(--color-slate-500);
+      border: 1.5px solid var(--color-neutral-500);
+      background-color: var(--color-neutral-500);
     }
   }
   &.p-disabled {
-    border: 1.5px solid var(--color-slate-500);
+    border: 1.5px solid var(--color-neutral-500);
   }
 }
 

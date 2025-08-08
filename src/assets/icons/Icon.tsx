@@ -118,3 +118,203 @@ export const EmailIcon = ({
     </svg>
   );
 };
+export const ChevronIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9 4L14.8787 9.87868C16.0503 11.0503 16.0503 12.9497 14.8787 14.1213L9 20"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const BurgerIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 12H19M5 5H19M5 19H19"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const LoginIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 25 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.18 14.62L14.74 12.06L12.18 9.5"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M4.5 12.0601H14.67"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12.5 4C16.92 4 20.5 7 20.5 12C20.5 17 16.92 20 12.5 20"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const HomeIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 17V14M3.69433 17.3322L3.17992 11.1593C3.06767 9.81224 3.64335 8.4996 4.71034 7.66972L9.54422 3.91003C10.9887 2.78658 13.0113 2.78658 14.4557 3.91004L19.2896 7.66972C20.3566 8.4996 20.9323 9.81224 20.82 11.1593L20.3056 17.3322C20.1329 19.4053 18.3998 21 16.3194 21H7.68051C5.60016 21 3.86709 19.4053 3.69433 17.3322Z"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const BoxIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.76471 10.3823L10.6191 11.8096C11.4857 12.2428 12.5082 12.231 13.3644 11.7776L20.0966 8.21321M7.76471 10.3823L13.7647 7.20585M7.76471 10.3823L3.43093 8.21604M12 12.126V21.126M20.0966 8.21321C19.8416 7.77271 19.4747 7.39687 19.0211 7.13003L13.4785 3.8697C12.5624 3.33083 11.4296 3.31688 10.5005 3.83303L4.54307 7.14273C4.07663 7.40186 3.69695 7.77487 3.43093 8.21604M20.0966 8.21321C20.3566 8.66249 20.5 9.17904 20.5 9.71583V15.1937C20.5 16.305 19.8858 17.3252 18.9037 17.8451L13.3644 20.7776C12.5082 21.231 11.4857 21.2428 10.6191 20.8096L4.65836 17.8292C3.64201 17.321 3 16.2822 3 15.1459V9.7652C3 9.20929 3.15378 8.67567 3.43093 8.21604"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const FlightIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4.54344 8.56516L5.23116 9.59675C5.39912 9.84868 5.68186 10 5.98464 10H8.52297C9.23043 10 9.71419 9.28547 9.45144 8.62861L8.54855 6.37139C8.28581 5.71453 8.76957 5 9.47703 5H10.5194C10.8232 5 11.1105 5.13809 11.3002 5.3753L14.6998 9.62469C14.8895 9.86191 15.1768 10 15.4806 10L19.1716 10C19.702 10 20.2107 10.2107 20.5858 10.5858C21.3668 11.3668 21.3668 12.6332 20.5858 13.4142C20.2107 13.7893 19.702 14 19.1716 14L15.4806 14C15.1768 14 14.8895 14.1381 14.6998 14.3753L11.3002 18.6247C11.1105 18.8619 10.8232 19 10.5194 19H9.47703C8.76957 19 8.28581 18.2855 8.54855 17.6286L9.45144 15.3714C9.71419 14.7145 9.23043 14 8.52297 14H5.98464C5.68186 14 5.39912 14.1513 5.23116 14.4032L4.54344 15.4348C4.0785 16.1323 3.0336 16.0672 2.65875 15.3175C2.55557 15.1112 2.52043 14.8774 2.55836 14.6498L2.9452 12.3288C2.98148 12.1111 2.98148 11.8889 2.9452 11.6712L2.55836 9.35015C2.52043 9.12258 2.55557 8.88885 2.65875 8.68249C3.0336 7.9328 4.0785 7.86775 4.54344 8.56516Z"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const CartIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18.3846 8L18.6959 5.97674C18.8709 4.8395 19.8494 4 21 4M18.3846 8L17.3914 14.4562C17.1662 15.9197 15.907 17 14.4263 17H7.40653C6.00044 17 4.783 16.0234 4.47797 14.6508L3.8113 11.6508C3.39496 9.77725 4.82062 8 6.73987 8H18.3846ZM15.5 19.75C15.5 20.1642 15.1642 20.5 14.75 20.5C14.3358 20.5 14 20.1642 14 19.75C14 19.3358 14.3358 19 14.75 19C15.1642 19 15.5 19.3358 15.5 19.75ZM7.50002 19.75C7.50002 20.1642 7.16423 20.5 6.75002 20.5C6.3358 20.5 6.00002 20.1642 6.00002 19.75C6.00002 19.3358 6.3358 19 6.75002 19C7.16423 19 7.50002 19.3358 7.50002 19.75Z"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+export const FavoriteIcon = ({
+  width = "24",
+  height = "24",
+  fill = "var(--color-icon)",
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.11544 8.02607C3.20159 7.50361 3.37795 6.98115 3.6104 6.47461C5.00201 3.44215 8.95827 3.37934 11.6675 5.29632C11.8671 5.43753 12.1327 5.43753 12.3323 5.29632C15.0416 3.37934 18.9979 3.44215 20.3895 6.47461C20.6219 6.98115 20.7983 7.50361 20.8844 8.02607C22.0204 14.9158 14.4678 20 11.9999 20C9.53202 20 1.98019 14.9111 3.11544 8.02607Z"
+        stroke={fill}
+        stroke-width="1.5"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

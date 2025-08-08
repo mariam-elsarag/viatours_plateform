@@ -125,7 +125,7 @@ const Login = () => {
               />
               <label
                 htmlFor="rememberUser"
-                className="text-slate-500 body_lg cursor-pointer"
+                className="text-neutral-500 body_lg cursor-pointer"
               >
                 Remember me
               </label>

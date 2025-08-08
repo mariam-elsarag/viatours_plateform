@@ -88,12 +88,12 @@
 }
 
 .title_lg {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
 }
 @media (min-width: 744px) {
   .title_lg {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
   }
 }
@@ -189,6 +189,30 @@ body {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1535px) {
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.main_shadow {
+  box-shadow: 0 0 8px rgba(0, 12, 6, 0.1019607843);
 }
 
 .auth_right_img {
@@ -211,22 +235,22 @@ body {
 }
 
 .label {
-  color: var(--color-slate-500);
+  color: var(--color-neutral-500);
 }
 
 .input, .textarea {
-  border: 1px solid var(--color-slate-200);
+  border: 1px solid var(--color-neutral-200);
   background: white;
   border-radius: 12px;
   padding: 8px;
   height: 40px;
-  color: var(--color-slate-600);
+  color: var(--color-neutral-600);
 }
 .input.focus, .focus.textarea {
   border: 1px solid var(--color-primary-500);
 }
 .input.fill, .fill.textarea {
-  border: 1px solid var(--color-slate-400) !important;
+  border: 1px solid var(--color-neutral-400) !important;
 }
 .input.disabled, .disabled.textarea {
   opacity: 0.6;
@@ -247,21 +271,21 @@ body {
 }
 
 input::-moz-placeholder {
-  color: var(--color-slate-500);
+  color: var(--color-neutral-500);
 }
 
 input::placeholder {
-  color: var(--color-slate-500);
+  color: var(--color-neutral-500);
 }
 input:-webkit-autofill {
   box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: var(--color-slate-600);
-  -moz-text-fill-color: var(--color-slate-600);
+  -webkit-text-fill-color: var(--color-neutral-600);
+  -moz-text-fill-color: var(--color-neutral-600);
 }
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active, input:-moz-autofil, input:-moz-autofill, input:autofill {
   box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: var(--color-slate-600);
-  -moz-text-fill-color: var(--color-slate-600);
+  -webkit-text-fill-color: var(--color-neutral-600);
+  -moz-text-fill-color: var(--color-neutral-600);
 }
 input[type=password]::-ms-reveal, input[type=password]::-ms-clear {
   display: none;
@@ -279,7 +303,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   width: 18px !important;
   height: 18px !important;
   background: white;
-  border: 1.5px solid var(--color-slate-500);
+  border: 1.5px solid var(--color-neutral-500);
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -291,11 +315,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   background-color: var(--color-primary-500);
 }
 .p-checkbox.p-highlight .p-checkbox-box.p-disabled {
-  border: 1.5px solid var(--color-slate-500);
-  background-color: var(--color-slate-500);
+  border: 1.5px solid var(--color-neutral-500);
+  background-color: var(--color-neutral-500);
 }
 .p-checkbox.p-disabled {
-  border: 1.5px solid var(--color-slate-500);
+  border: 1.5px solid var(--color-neutral-500);
 }
 
 .p-invalid .p-checkbox-box {
@@ -321,7 +345,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
-  border: 1px solid var(--color-slate-200);
+  border: 1px solid var(--color-neutral-200);
 }
 @media (min-width: 745px) {
   .p-inputotp-input {
@@ -330,7 +354,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   }
 }
 .p-inputotp-input.p-filled {
-  border: 1px solid var(--color-slate-400) !important;
+  border: 1px solid var(--color-neutral-400) !important;
 }
 .p-inputotp .p-invalid {
   border: 1px solid var(--color-error-500) !important;
@@ -354,8 +378,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -o-transform: translateY(-50%);
 }
 .Toastify__toast-container .Toastify__close-button svg {
-  fill: var(--color-slate-500);
-  stroke: var(--color-slate-500);
+  fill: var(--color-neutral-500);
+  stroke: var(--color-neutral-500);
 }
 .Toastify__toast-container .toast_main_content_style, .Toastify__toast-container .Toastify__toast--warning, .Toastify__toast-container .Toastify__toast--error, .Toastify__toast-container .Toastify__toast--info, .Toastify__toast-container .Toastify__toast--success {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1019607843);
